@@ -21,6 +21,7 @@ A simple, single-page static web application designed to parse, display, and ana
 *   **Frontend:** HTML, JavaScript
 *   **Styling:** Tailwind CSS (via CDN)
 *   **Version Control:** Git
+*   **Build Tools:** Node.js, npm, `terser`, `html-minifier-terser`, `gh-pages`
 
 ## Getting Started
 
@@ -38,6 +39,27 @@ A simple, single-page static web application designed to parse, display, and ana
 4.  Use the search bar, record type filter, and column selector to explore the data.
 5.  Utilize the "Export JSON", "Print View", and "Upload New File" buttons as needed.
 
+### Local Development & Build
+
+1.  **Clone the repository:**
+    ```bash
+    git clone <repository-url> # Replace with your actual repository URL
+    cd bai2-LOCKBOX
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+3.  **Run the build process:**
+    This command minifies the source files and prepares them for deployment in the `dist/` folder.
+    ```bash
+    npm run build
+    ```
+4.  **Deploy to GitHub Pages:**
+    This command will automatically build the project and push the contents of the `dist/` folder to the `gh-pages` branch.
+    ```bash
+    npm run deploy
+    ```
 
 ## Project Structure
 

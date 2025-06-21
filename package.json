@@ -4,13 +4,13 @@
    "description": "A Lockbox BAI2 Viewer application",
    "main": "app.js",
    "scripts": {
-     "clean": "rm -rf dist",
+     "clean": "rm -rf dist && npx gh-pages-clean",
      "build": "npm run clean && mkdir -p dist && npm run build:js && npm run build:html && npm run build:readme",
      "build:js": "npx terser app.js -o dist/app.min.js",
      "build:html": "cp index.html dist/index.html && npx replace-in-file 'app.js' 'app.min.js' dist/index.html && npx html-minifier-terser dist/index.html -o dist/index.html --remove-comments --collapse-whitespace --minify-css true --minify-js true",
      "build:readme": "cp README.md dist/README.md",
      "predeploy": "npm run build",
-     "deploy": "gh-pages -d dist"
+     "deploy": "npx gh-pages -d dist"
    },
    "keywords": ["bai2", "lockbox", "viewer", "application"],
    "author": "Satish",
@@ -18,6 +18,7 @@
    "devDependencies": {
      "html-minifier-terser": "^7.1.0",
      "terser": "^5.31.0",
-     "replace-in-file": "^7.0.2"
+     "replace-in-file": "^7.0.2",
+     "gh-pages": "^6.1.1"
    }
  }

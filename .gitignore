@@ -1,10 +1,8 @@
-# Ignore everything by default
-*
+# Dependencies
+/node_modules
 
-# But, do not ignore the dist directory.
-# The first rule un-ignores the directory, the second un-ignores its contents.
-!/dist/
-!/dist/**
+# Build output
+/dist
 
-# Also, do not ignore this .gitignore file itself.
-!/.gitignore
+# Environment variables
+.env

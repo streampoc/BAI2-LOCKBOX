@@ -1,0 +1,10 @@
+# Ignore everything by default
+*
+
+# But, do not ignore the dist directory.
+# The first rule un-ignores the directory, the second un-ignores its contents.
+!/dist/
+!/dist/**
+
+# Also, do not ignore this .gitignore file itself.
+!/.gitignore

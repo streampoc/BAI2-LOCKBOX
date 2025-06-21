@@ -1,5 +1,9 @@
 # Lockbox BAI2 Viewer
 
+**Live Demo:** [**https://streampoc.github.io/BAI2-LOCKBOX/**](https://streampoc.github.io/BAI2-LOCKBOX/)
+
+---
+
 A simple, single-page static web application designed to parse, display, and analyze fixed-width lockbox (BAI2) format files. This tool provides a user-friendly interface to inspect the structured data within your BAI2 files, offering detailed record breakdowns, summary statistics, and filtering capabilities.
 
 ## Features
@@ -21,7 +25,7 @@ A simple, single-page static web application designed to parse, display, and ana
 *   **Frontend:** HTML, JavaScript
 *   **Styling:** Tailwind CSS (via CDN)
 *   **Version Control:** Git
-*   **Build Tools:** Node.js, npm, `terser`, `html-minifier-terser`, `gh-pages`
+*   **Build & Deployment:** Node.js, npm, `terser`, `html-minifier-terser`, `gh-pages`
 
 ## Getting Started
 
@@ -31,10 +35,9 @@ A simple, single-page static web application designed to parse, display, and ana
 *   Node.js and npm (if you plan to build/minify the application yourself).
 
 ### Usage (as a deployed application)
-
-1.  Open the `index.html` file in your web browser, or access the deployed application URL.
-2.  Drag and drop your fixed-width BAI2 file (e.g., `.txt`, `.dat`, `.csv`) onto the designated upload area.
-    *   Alternatively, click the "Select File" button to browse for your file.
+1.  Visit the Live Demo URL.
+2.  Drag and drop your fixed-width BAI2 file (e.g., `.txt`, `.dat`, `.csv`) onto the upload area.
+    *   Alternatively, click the **Select File** button to browse for your file.
 3.  The application will parse and display the file's contents.
 4.  Use the search bar, record type filter, and column selector to explore the data.
 5.  Utilize the "Export JSON", "Print View", and "Upload New File" buttons as needed.
@@ -42,7 +45,7 @@ A simple, single-page static web application designed to parse, display, and ana
 ### Local Development & Build
 
 1.  **Clone the repository:**
-    ```bash
+    ```sh
     git clone <repository-url> # Replace with your actual repository URL
     cd bai2-LOCKBOX
     ```
@@ -52,12 +55,12 @@ A simple, single-page static web application designed to parse, display, and ana
     ```
 3.  **Run the build process:**
     This command minifies the source files and prepares them for deployment in the `dist/` folder.
-    ```bash
+    ```sh
     npm run build
     ```
 4.  **Deploy to GitHub Pages:**
     This command will automatically build the project and push the contents of the `dist/` folder to the `gh-pages` branch.
-    ```bash
+    ```sh
     npm run deploy
     ```
 
@@ -66,6 +69,10 @@ A simple, single-page static web application designed to parse, display, and ana
 ```
 bai2-LOCKBOX/
 ├── .gitignore          # Specifies intentionally untracked files to ignore
+├── robots.txt          # Instructions for web crawlers
+├── sitemap.xml         # XML sitemap for search engines
+├── googleb84f590d35ba85ce.html # HTML file for search engine ownership verification (replace with actual name)
+└── README.md
 └── dist/               # Output directory for minified and deployable files
     ├── app.min.js
     ├── index.html
